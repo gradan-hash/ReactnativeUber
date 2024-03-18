@@ -5,11 +5,13 @@ import {
   Dimensions,
   ScrollView,
   Image,
+  FlatList,
 } from "react-native";
 import React from "react";
 import { colors, parameters } from "../global/styles";
 import { Icon } from "@rneui/themed";
 import { StatusBar } from "expo-status-bar";
+import { filterData } from "../global/data";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
@@ -45,7 +47,27 @@ const Home = () => {
               />
             </View>
           </View>
+          <View></View>
         </View>
+
+        <FlatList
+          numRows={3}
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={filterData}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <View style={styles.card}>
+              <View style={styles.view2}>
+                <Image style={styles.image2} source={item.image} />
+              </View>
+
+              <View>
+                <Text style={styles.title}>{item.name}</Text>
+              </View>
+            </View>
+          )}
+        />
       </ScrollView>
       <StatusBar style="light" backgroundColor="#2058c0 " translucent={true} />
     </View>
@@ -114,7 +136,7 @@ const styles = StyleSheet.create({
   },
   card: {
     alignItems: "center",
-    margin: SCREEN_WIDTH / 22,
+    margin: SCREEN_WIDTH / 12,
   },
 
   view2: { marginBottom: 5, borderRadius: 15, backgroundColor: colors.grey6 },
