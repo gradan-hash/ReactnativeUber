@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Dimensions, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  ScrollView,
+  Image,
+} from "react-native";
 import React from "react";
 import { colors, parameters } from "../global/styles";
 import { Icon } from "@rneui/themed";
@@ -19,6 +26,27 @@ const Home = () => {
           />
         </View>
       </View>
+      <ScrollView bounces={false}>
+        <View style={styles.home}>
+          <Text style={styles.text1}>Move With Ease</Text>
+          <View style={styles.view1}>
+            <View style={styles.view8}>
+              <Text style={styles.text2}>
+                All type of movement Services enjoy
+              </Text>
+              <View style={styles.button1}>
+                <Text style={styles.button1Text}>Ride With Us</Text>
+              </View>
+            </View>
+            <View>
+              <Image
+                style={styles.image1}
+                source={require("../../assets/uberCar.png")}
+              />
+            </View>
+          </View>
+        </View>
+      </ScrollView>
       <StatusBar style="light" backgroundColor="#2058c0 " translucent={true} />
     </View>
   );
