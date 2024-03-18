@@ -1,12 +1,23 @@
-import { StyleSheet, Text, View, Dimensions } from "react-native";
+import { StyleSheet, Text, View, Dimensions,ScrollView } from "react-native";
 import React from "react";
 import { colors, parameters } from "../global/styles";
+import { Icon } from "@rneui/themed";
+
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>Hello home screen</Text>
+      <View style={styles.header}>
+        <View style={styles.icon1}>
+          <Icon
+            type="material-community"
+            name="menu"
+            color={colors.white}
+            size={40}
+          />
+        </View>
+      </View>
     </View>
   );
 };
