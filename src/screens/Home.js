@@ -68,6 +68,25 @@ const Home = () => {
             </View>
           )}
         />
+
+        <View style={styles.view3}>
+          <Text>Where To ?</Text>
+          <View style={styles.view4}>
+            <Icon
+              type="material-community"
+              name="clock-time-four"
+              color={colors.grey1}
+              size={30}
+            />
+            <Text style={{ marginLeft: 5 }}>Now</Text>
+            <Icon
+              type="material-community"
+              name="chevron-down"
+              color={colors.grey1}
+              size={26}
+            />
+          </View>
+        </View>
       </ScrollView>
       <StatusBar style="light" backgroundColor="#2058c0 " translucent={true} />
     </View>
