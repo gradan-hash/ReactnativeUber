@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View, Dimensions,ScrollView } from "react-native";
+import { StyleSheet, Text, View, Dimensions, ScrollView } from "react-native";
 import React from "react";
 import { colors, parameters } from "../global/styles";
 import { Icon } from "@rneui/themed";
+import { StatusBar } from "expo-status-bar";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
@@ -18,6 +19,7 @@ const Home = () => {
           />
         </View>
       </View>
+      <StatusBar style="light" backgroundColor="#2058c0 " translucent={true} />
     </View>
   );
 };
