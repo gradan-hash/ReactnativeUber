@@ -70,7 +70,7 @@ const Home = () => {
         />
 
         <View style={styles.view3}>
-          <Text>Where To ?</Text>
+          <Text style={styles.text3}>Where To ?</Text>
           <View style={styles.view4}>
             <Icon
               type="material-community"
@@ -85,6 +85,66 @@ const Home = () => {
               color={colors.grey1}
               size={26}
             />
+          </View>
+        </View>
+
+        <View style={styles.view5}>
+          <View style={styles.view6}>
+            <View style={styles.view7}>
+              <Icon
+                type="material-community"
+                name="map-marker"
+                color={colors.black}
+                size={22}
+              />
+            </View>
+            <View>
+              <Text style={{ fontSize: 18, color: colors.black }}>
+                32 Machakos peoples park
+              </Text>
+              <Text style={{ color: colors.grey3 }}>
+                1234 machakos university
+              </Text>
+            </View>
+            <View>
+              <Icon
+                type="material-community"
+                name="chevron-right"
+                color={colors.grey}
+                size={26}
+                style={{ marginLeft: 100 }}
+              />
+            </View>
+          </View>
+        </View>
+
+        <View style={{ ...styles.view5, borderBottomWidth: 0 }}>
+          <View style={styles.view6}>
+            <View style={styles.view7}>
+              <Icon
+                type="material-community"
+                name="map-marker"
+                color={colors.black}
+                size={22}
+              />
+            </View>
+            <View>
+              <Text style={{ fontSize: 18, color: colors.black }}>
+                32 Machakos peoples park
+              </Text>
+              <Text style={{ color: colors.grey3 }}>
+                1234 machakos university
+              </Text>
+            </View>
+            <View>
+              <Icon
+                type="material-community"
+                name="chevron-right"
+                color={colors.grey}
+                size={26}
+                style={{ marginLeft: 100 }}
+              />
+            </View>
           </View>
         </View>
       </ScrollView>
