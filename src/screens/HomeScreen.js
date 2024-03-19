@@ -19,7 +19,7 @@ import * as Location from "expo-location";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
-const Home = () => {
+const HomeScreen = () => {
   const [latlong, setLatlong] = useState({});
 
   const askPermission = async () => {
@@ -224,7 +224,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
