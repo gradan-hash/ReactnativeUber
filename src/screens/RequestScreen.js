@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { colors, parameters } from "../global/styles";
+import MapComponent from "../components/MapComponent";
 const RequestScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>RequestScreen</Text>
+      <MapComponent />
     </View>
   );
 };
