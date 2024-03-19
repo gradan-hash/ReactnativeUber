@@ -49,19 +49,25 @@ const RequestScreen = () => {
               source={require("../../assets/transit.png")}
             />
           </View>
+
           <View>
-            <TouchableOpacity>
-              <View style={styles.view5}>
-                <Text style={styles.text10}>From Where ?</Text>
+            <View style={styles.view6}>
+              <Text style={styles.text1}>From Where?</Text>
+            </View>
+            <View style={styles.view7}>
+              <TouchableOpacity>
+                <View style={styles.view5}>
+                  <Text style={styles.text10}>...</Text>
+                </View>
+              </TouchableOpacity>
+              <View style={styles.view8}>
+                <Icon
+                  type="material-community"
+                  name="plus-thick"
+                  color={colors.black}
+                  size={24}
+                />
               </View>
-            </TouchableOpacity>
-            <View style={styles.view8}>
-              <Icon
-                type="material-community"
-                name="plus=thick"
-                color={colors.black}
-                size={24}
-              />
             </View>
           </View>
         </View>
