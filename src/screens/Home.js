@@ -153,7 +153,7 @@ const Home = () => {
         <Text style={styles.text4}>Around You</Text>
 
         <View style={{ alignItems: "center", justifyContent: "center" }}>
-          <MapView />
+          <MapView provider={PROVIDER_GOOGLE} style={styles.map} />
         </View>
       </ScrollView>
       <StatusBar style="light" backgroundColor="#2058c0 " translucent={true} />
