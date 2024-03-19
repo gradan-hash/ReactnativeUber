@@ -1,13 +1,13 @@
 import * as React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { HomeStack } from "./StackNavigators";
-import { Icon } from "react-native-elements";
+import { Icon } from "@rneui/themed";
 import { colors } from "../global/styles";
 
 const Drawer = createDrawerNavigator();
 export default function DrawerNavigator() {
   return (
-    <Drawer.DrawerNavigator>
+    <Drawer.Navigator>
       <Drawer.Screen
         name="Homestack"
         component={HomeStack}
@@ -21,9 +21,9 @@ export default function DrawerNavigator() {
               size={size}
             />
           ),
+          headerShown: false,
         }}
-        headerShown:false
       />
-    </Drawer.DrawerNavigator>
+    </Drawer.Navigator>
   );
 }
