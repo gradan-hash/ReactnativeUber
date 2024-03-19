@@ -5,8 +5,6 @@ export const filterData = [
   { name: "Reserve", image: require("../../assets/reserve.png"), id: "2" },
 ];
 
-
-
 export const rideData = [
   { street: "32 Olivia Rd", area: "Klipfontein 83-Ir,Boksburg", id: "0" },
   { street: "Hughes Industrial Park", area: "Hughes,Boksburg", id: "1" },
@@ -130,9 +128,9 @@ export const availableServices = [
 ];
 
 export const carsAround = [
-  { latitude: -26.207487, longitude: 28.236226 },
-  { latitude: -26.202616, longitude: 28.227718 },
-  { latitude: -26.202424, longitude: 28.236612 },
-  { latitude: -26.208565, longitude: 28.237191 },
-  { latitude: -26.203598, longitude: 28.239509 },
+  { latitude: -1.519776, longitude: 37.266762 },
+  { latitude: -1.521513, longitude: 37.267599 },
+  { latitude: -1.513919, longitude: 37.259145 },
+  { latitude: -1.51851, longitude: 37.255797 },
+  { latitude: -1.5221826, longitude: 37.2570716 },
 ];

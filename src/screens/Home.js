@@ -12,14 +12,16 @@ import { colors, parameters } from "../global/styles";
 import { Icon } from "@rneui/themed";
 import { StatusBar } from "expo-status-bar";
 import { filterData } from "../global/data";
-import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
+import { carsAround } from "../global/data";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import { mapStyle } from "../global/mapStyle";
 import * as Location from "expo-location";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
 const Home = () => {
-  const { latlong, setLatlong } = useState({});
+  const [latlong, setLatlong] = useState({});
+
   const askPermission = async () => {
     const permission = await Location.requestForegroundPermissionsAsync();
     return permission.status == "granted";
@@ -41,7 +43,7 @@ const Home = () => {
       const { granted } = await Location.requestForegroundPermissionsAsync();
       if (!granted) return;
       const {
-        cordinate: { latitude, longitude },
+        coords: { latitude, longitude },
       } = await Location.getCurrentPositionAsync();
 
       // console.log({cordinate});
@@ -200,7 +202,21 @@ const Home = () => {
             customMapStyle={mapStyle}
             showsUserLocation={true}
             followsUserLocation={true}
-          />
+            initialRegion={{
+              ...carsAround[0],
+              latitudeDelta: 0.008,
+              longitudeDelta: 0.008,
+            }}>
+            {carsAround.map((item, index) => (
+              <Marker coordinate={item} key={index.toString()}>
+                <Image
+                  source={require("../../assets/carMarker.png")}
+                  style={styles.carsAround}
+                  resizeMode="cover"
+                />
+              </Marker>
+            ))}
+          </MapView>
         </View>
       </ScrollView>
       <StatusBar style="light" backgroundColor="#2058c0 " translucent={true} />
