@@ -147,6 +147,9 @@ const Home = () => {
             </View>
           </View>
         </View>
+
+        <Text style={styles.text4}>Around You</Text>
+        
       </ScrollView>
       <StatusBar style="light" backgroundColor="#2058c0 " translucent={true} />
     </View>
