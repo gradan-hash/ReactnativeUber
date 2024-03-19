@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   TouchableOpacity,
 } from "react-native";
 import React from "react";
@@ -15,6 +16,14 @@ const SCREEN_WIDTH = Dimensions.get("window").width;
 const RequestScreen = () => {
   return (
     <View style={styles.container}>
+      <View style={styles.view1}>
+        <Icon
+          type="material-community"
+          name="arrow-left"
+          color={colors.grey1}
+          size={32}
+        />
+      </View>
       <View style={styles.view2}>
         <TouchableOpacity>
           <View style={styles.view3}>
@@ -24,8 +33,38 @@ const RequestScreen = () => {
               size={30}
               source={require("../../assets/blankProfilePic.jpg")}
             />
+            <Text style={{ marginLeft: 5 }}>For someone</Text>
+            <Icon
+              type="material-community"
+              name="chevron-down"
+              color={colors.grey1}
+              size={26}
+            />
           </View>
         </TouchableOpacity>
+        <View style={styles.view4}>
+          <View>
+            <Image
+              style={styles.image1}
+              source={require("../../assets/transit.png")}
+            />
+          </View>
+          <View>
+            <TouchableOpacity>
+              <View style={styles.view5}>
+                <Text style={styles.text10}>From Where ?</Text>
+              </View>
+            </TouchableOpacity>
+            <View style={styles.view8}>
+              <Icon
+                type="material-community"
+                name="plus=thick"
+                color={colors.black}
+                size={24}
+              />
+            </View>
+          </View>
+        </View>
       </View>
       <MapComponent />
     </View>
