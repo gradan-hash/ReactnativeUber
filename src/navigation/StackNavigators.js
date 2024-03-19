@@ -1,16 +1,26 @@
 import * as React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen } from "../screens/HomeScreen";
-const Home = createNativeStackNavigator();
+import HomeScreen from "../screens/HomeScreen";
+import RequestScreen from "../screens/RequestScreen";
 
-export function HomeStack() {
+const HomeStack = createNativeStackNavigator();
+
+export function HomeStackNavigator() {
+  // Renaming HomeStack to HomeStackNavigator for clarity
   return (
-    <Home.Navigator>
-      <Home.Screen
+    <HomeStack.Navigator>
+      <HomeStack.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={{ headerShown: false }}
       />
-    </Home.Navigator>
+      <HomeStack.Screen
+        name="RequestScreen"
+        component={RequestScreen}
+        options={{ headerShown: false }}
+      />
+    </HomeStack.Navigator>
   );
 }
+
+export default HomeStackNavigator; // Exporting the stack navigator component

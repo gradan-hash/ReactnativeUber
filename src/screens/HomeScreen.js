@@ -6,6 +6,7 @@ import {
   ScrollView,
   Image,
   FlatList,
+  TouchableOpacity,
 } from "react-native";
 import React, { useState, useRef, useEffect } from "react";
 import { colors, parameters } from "../global/styles";
@@ -16,10 +17,11 @@ import { carsAround } from "../global/data";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import { mapStyle } from "../global/mapStyle";
 import * as Location from "expo-location";
+import { useNavigation } from "@react-navigation/native";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const [latlong, setLatlong] = useState({});
 
   const askPermission = async () => {
@@ -80,9 +82,14 @@ const HomeScreen = () => {
               <Text style={styles.text2}>
                 All type of movement Services enjoy
               </Text>
-              <View style={styles.button1}>
-                <Text style={styles.button1Text}>Ride With Us</Text>
-              </View>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("RequestScreen", { state: 0 });
+                }}>
+                <View style={styles.button1}>
+                  <Text style={styles.button1Text}>Ride With Us</Text>
+                </View>
+              </TouchableOpacity>
             </View>
             <View>
               <Image

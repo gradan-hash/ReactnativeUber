@@ -1,6 +1,6 @@
 import * as React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { HomeStack } from "./StackNavigators";
+import { HomeStackNavigator } from "./StackNavigators";
 import { Icon } from "@rneui/themed";
 import { colors } from "../global/styles";
 
@@ -9,8 +9,8 @@ export default function DrawerNavigator() {
   return (
     <Drawer.Navigator>
       <Drawer.Screen
-        name="Homestack"
-        component={HomeStack}
+        name="HomeStackNavigator"
+        component={HomeStackNavigator}
         options={{
           title: "Home",
           drawerIcon: ({ forcussed, size }) => (

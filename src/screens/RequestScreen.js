@@ -1,14 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { colors, parameters } from "../global/styles";
 const RequestScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>RequestScreen</Text>
     </View>
-  )
-}
+  );
+};
 
-export default RequestScreen
+export default RequestScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: parameters.statusBarHeight,
+  },
+});
