@@ -21,7 +21,7 @@ export function HomeStackNavigator() {
         options={{ headerShown: false }}
       />
       <HomeStack.Screen
-        name="Destination"
+        name="DestinationScreen"
         component={DestinationScreen}
         options={{ headerShown: false }}
       />

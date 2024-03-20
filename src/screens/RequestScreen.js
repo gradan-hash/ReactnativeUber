@@ -13,7 +13,7 @@ import { Icon, Avatar } from "@rneui/themed";
 const SCREEN_HEIGHT = Dimensions.get("window").height;
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
-const RequestScreen = () => {
+const RequestScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.view1}>
@@ -51,9 +51,15 @@ const RequestScreen = () => {
           </View>
 
           <View>
-            <View style={styles.view6}>
-              <Text style={styles.text1}>From Where?</Text>
-            </View>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("DestinationScreen");
+              }}>
+              <View style={styles.view6}>
+                <Text style={styles.text1}>From Where?</Text>
+              </View>
+            </TouchableOpacity>
+
             <View style={styles.view7}>
               <TouchableOpacity>
                 <View style={styles.view5}>
